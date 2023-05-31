@@ -38,6 +38,10 @@ public class CardTrick {
         customerCard.setValue(choice);
         customerCard.setSuit(Card.SUITS[suit]);
         
+         Card luckyCard = new Card();
+         luckyCard.setValue(7);  // Set the card value (e.g., 7)
+         luckyCard.setSuit(Card.SUITS[1]);  // Set the card suit
+     
          boolean foundMatch = false;
         for (Card card : magicHand) {
             if (card.equals(customerCard)) {
