@@ -38,10 +38,26 @@ public class CardTrick {
         customerCard.setValue(choice);
         customerCard.setSuit(suit);
         
-        
+         boolean foundMatch = false;
+        for (Card card : magicHand) {
+            if (card.equals(customerCard)) {
+                foundMatch = true;
+                break;
+            }
+        }
+
+        if (foundMatch) {
+            System.out.println("Congratulations! Your card was found in the magic hand.");
+        } else {
+            System.out.println("Sorry, your card was not found in the magic hand.");
+        Card luckyCard = new Card();
+        luckyCard.setValue(10);  // Set the card number of your choosing
+        luckyCard.setSuit("Hearts");
+        }
+    }
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
     }
     
-}
+
